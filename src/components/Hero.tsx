@@ -32,6 +32,11 @@ function Hero({}: Props) {
             <span className='mr-3' color='white'>{text}</span>
             <Cursor cursorColor='yellow'/>
             </h1>
+            <div>
+            <a href="../../public/CV.pdf" download="CV_IanSanchez.pdf">
+            <button className='resumeButton'>Download CV</button>
+            </a>
+            </div>
             <div className='pt-5'>
                 <Link href="#about">
                 <button className='heroButton'>About</button>
