@@ -20,7 +20,6 @@ function Hero({}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles/>
-        <Image src={}/>
         <h1>
         <span color='white'>{text}</span>
         <Cursor cursorColor='yellow'/>
