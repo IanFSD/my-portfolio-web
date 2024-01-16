@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion'
 import React from 'react'
-import projectImage from '../../public/portfolioImage4.jpg'
+import projectImage from '../../public/images/portfolioImage4.jpg'
 
 type Props = {}
 
@@ -27,7 +27,8 @@ function Projects({}: Props) {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Projects</h3>
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
-            z-20'>
+            z-20 scrollbar scrollbar-track-gray-400/20
+            scrollbar-thumb-[#F7AB0A] scrollbar-thin'>
            {projects.map((project,i) => (
                 <div key={project.id} className='w-screen flex-shrink-0 snap-center flex-col space-y-5
                    items-center justify-center  p-20 md:p-44 h-screen'>

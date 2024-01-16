@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion'
 import React from 'react'
-import aboutImage from '../../public/about.webp'
+import aboutImage from '../../public/images/about.webp'
 
 type Props = {}
 

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import { motion } from 'framer-motion'
-import jobImage from '../../public/itrio_sa_logo.jpeg'
+import jobImage from '../../public/images/itrio_sa_logo.jpeg'
 type Props = {}
 
 function ExperienceCards({}: Props) {

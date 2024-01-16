@@ -3,7 +3,7 @@ import React from 'react'
 import { Cursor,useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles';
 import Image from 'next/image';
-import profileImage from '../../public/profilImage.webp'
+import profileImage from '../../public//images/profilImage.webp'
 import Link from 'next/link';
 
 type Props = {}
@@ -33,7 +33,7 @@ function Hero({}: Props) {
             <Cursor cursorColor='yellow'/>
             </h1>
             <div>
-            <a href="../../public/CV.pdf" download="CV_IanSanchez.pdf">
+            <a href="../../public/PDF/CV.pdf" download="CV_IanSanchez.pdf">
             <button className='resumeButton'>Download CV</button>
             </a>
             </div>

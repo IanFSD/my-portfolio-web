@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion'
 import React from 'react'
-import reactIcon from '../../public/React-icon.svg'
+import reactIcon from '../../public/images/React-icon.svg'
 type Props = {
     direccionLeft?:boolean;
 }

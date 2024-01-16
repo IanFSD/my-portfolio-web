@@ -27,6 +27,7 @@ import Link from 'next/link';
             <SocialIcon url="https://www.linkedin.com/in/ian-sanchez-b53405250/" fgColor='gray' bgColor='transparent'></SocialIcon>
             <SocialIcon url="https://www.facebook.com/profile.php?id=100011608652031" fgColor='gray' bgColor='transparent'></SocialIcon>
         </motion.div>
+        <Link href='#contact'>
         <motion.div
         initial={{
             x:500,
@@ -42,10 +43,9 @@ import Link from 'next/link';
             duration:1.5
         }}>
             <SocialIcon className='cursor-pointer' fgColor='white' bgColor='transparent' network='email'></SocialIcon>
-            <a href="#contact">
             <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Contact Me</p>
-            </a>
         </motion.div>
+        </Link>
     </header>
   )
 }
