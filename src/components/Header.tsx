@@ -2,6 +2,7 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from "framer-motion"
+import Link from 'next/link';
 
  function Header() {
   return (
@@ -41,7 +42,9 @@ import { motion } from "framer-motion"
             duration:1.5
         }}>
             <SocialIcon className='cursor-pointer' fgColor='white' bgColor='transparent' network='email'></SocialIcon>
+            <a href="#contact">
             <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Contact Me</p>
+            </a>
         </motion.div>
     </header>
   )

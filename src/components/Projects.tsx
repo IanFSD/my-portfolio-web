@@ -2,12 +2,17 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import projectImage from '../../public/portfolioImage4.jpg'
+
 type Props = {}
 
 function Projects({}: Props) {
-    const projects = [1,2,3]
+    const projects = [
+        {id:1,value:1},
+        {id:2,value:2},
+        {id:3,value:3}]
   return (
-    <motion.div 
+    <motion.div
+
     initial={{
         opacity:0
     }}
@@ -23,8 +28,8 @@ function Projects({}: Props) {
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
             z-20'>
-            {projects.map((project,i) => (
-                <div className='w-screen flex-shrink-0 snap-center flex-col space-y-5
+           {projects.map((project,i) => (
+                <div key={project.id} className='w-screen flex-shrink-0 snap-center flex-col space-y-5
                    items-center justify-center  p-20 md:p-44 h-screen'>
                     <motion.img 
                     initial={{
@@ -41,7 +46,7 @@ function Projects({}: Props) {
                     viewport={{
                         once: true
                     }}
-                    src={projectImage.src}  className='relative rounded-full h-32 w-32 mx-auto rounded object-cover'/>
+                    src={projectImage.src} className='relative rounded-full h-32 w-32 mx-auto rounded object-cover'/>
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
                             <span className='underline decoration-[#F7AB0A]/50'>Test {i + 1} of {projects.length}</span>

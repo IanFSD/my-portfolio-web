@@ -10,3 +10,5 @@ My Portfolio project to show my coding skills.
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Typescript](https://www.typescriptlang.org/)
 * [Framer Motion](https://www.framer.com/motion/)
+* [HeroIcons](https://heroicons.com/)
+* [React Hook Form](https://www.react-hook-form.com/)
