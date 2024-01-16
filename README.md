@@ -3,12 +3,13 @@
 My Portfolio project to show my coding skills.
 
 # Tools used #
-
-* HTML, CSS and JavaScript
 * [Next.Js](https://nextjs.org/)
 * [React](https://react.dev/)
 * [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
 * [react-social-icons](https://www.npmjs.com/package/react-social-icons)
 * [Tailwind CSS](https://tailwindcss.com/)
+* [tailwind-scrollbar](https://www.npmjs.com/package/tailwind-scrollbar)
 * [Typescript](https://www.typescriptlang.org/)
 * [Framer Motion](https://www.framer.com/motion/)
+* [HeroIcons](https://heroicons.com/)
+* [React Hook Form](https://www.react-hook-form.com/)
