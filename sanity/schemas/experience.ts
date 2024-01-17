@@ -21,7 +21,7 @@ export default defineType({
     defineField({
       name: 'companyName',
       title: 'Company Name',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'dateStarted',

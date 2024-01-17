@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sanity:build":"sanity build",
+    "sanity:dev": "npx sanity dev",
+    "sanity:start": "sanity start",
     "lint": "next lint"
   },
   "dependencies": {

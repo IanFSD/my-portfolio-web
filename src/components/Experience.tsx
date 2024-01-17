@@ -1,12 +1,16 @@
 'use client';
 import React from 'react'
 import { motion } from 'framer-motion'
-import ExperienceCards from './ExperienceCards';
+import ExperienceCard from './ExperienceCards';
+import { Experiences } from '@/app/api/types/typings';
+import { fetchExperience } from '@/app/api/fetchExperiences';
 
-type Props = {}
+type Props = {
+    experiences: Experiences[];
+}
 
-const Experience = (props: Props) => {
-  return (
+function Experience({experiences}: Props) {
+    return (
     <motion.div 
     initial={{
         opacity:0
@@ -24,12 +28,13 @@ const Experience = (props: Props) => {
         </h3>
         <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20
     scrollbar-thumb-[#F7AB0A]'>
-            <ExperienceCards/>
-            <ExperienceCards/>
-            <ExperienceCards/>
+        {experiences.map((experience) => (
+            <ExperienceCard key={experience._id} experience={experience}/>
+        ))}
         </div>
     </motion.div>
   )
 }
 
-export default Experience
+export default Experience;
+

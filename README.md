@@ -2,7 +2,7 @@
 
 My Portfolio project to show my coding skills.
 
-# Tools used #
+# Libraries #
 * [Next.Js](https://nextjs.org/)
 * [React](https://react.dev/)
 * [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
@@ -13,3 +13,4 @@ My Portfolio project to show my coding skills.
 * [Framer Motion](https://www.framer.com/motion/)
 * [HeroIcons](https://heroicons.com/)
 * [React Hook Form](https://www.react-hook-form.com/)
+* [Sanity.io](https://www.sanity.io/)

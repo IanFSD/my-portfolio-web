@@ -12,13 +12,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'experience',
-      title: 'Experience',
-      description:'Years of experience of the skill',
-      type: 'number',
-      validation:(Rule)=> Rule.min(0).max(100),
-    }),
-    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
