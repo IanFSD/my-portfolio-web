@@ -9,7 +9,6 @@ type Props = {
 }
 
 function Projects({projects}: Props) {
-    console.log('projects', projects)
   return (
     <motion.div
 
