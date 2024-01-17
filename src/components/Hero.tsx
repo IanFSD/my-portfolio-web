@@ -25,8 +25,7 @@ function Hero({pageInfo}: Props) {
         <BackgroundCircles/>
         <img
             className='relative rounded-full h-32 w-32 mx-auto rounded object-cover'
-            src={urlFor(pageInfo.profilePic).url()}
-            alt=''
+            src={urlFor(pageInfo?.profilePic).url()}
             />
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>{pageInfo.role}</h2>
