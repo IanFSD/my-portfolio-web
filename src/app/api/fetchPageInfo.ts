@@ -7,7 +7,7 @@ let URL = `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v1
 export const fetchPageInfo = async ()=> {
     const res = await fetch(URL,{ next: { revalidate: 10 } });
     const data = await res.json();
-    const pageInfo: PageInfo = data
+    const pageInfo: PageInfo = data.result
     console.log('url',URL)
     return pageInfo;
 }
