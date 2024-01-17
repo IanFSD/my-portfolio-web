@@ -2,9 +2,13 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from "framer-motion"
-import Link from 'next/link';
+import { Social } from '@/app/api/types/typings';
 
- function Header() {
+type Props = {
+    socials: Social[];
+}
+
+ function Header({socials}:Props) {
   return (
     <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20
     xl:items-center'>
@@ -24,10 +28,10 @@ import Link from 'next/link';
             duration:1.5,
         }}
         className='flex flew-row item-center'>
-            <SocialIcon url="https://www.linkedin.com/in/ian-sanchez-b53405250/" fgColor='gray' bgColor='transparent'></SocialIcon>
-            <SocialIcon url="https://www.facebook.com/profile.php?id=100011608652031" fgColor='gray' bgColor='transparent'></SocialIcon>
+            {socials?.map((social) => (
+            <SocialIcon key={social._id} url={social.url} fgColor='gray' bgColor='transparent'/>
+            ))}
         </motion.div>
-        <Link href='#contact'>
         <motion.div
         initial={{
             x:500,
@@ -45,7 +49,6 @@ import Link from 'next/link';
             <SocialIcon className='cursor-pointer' fgColor='white' bgColor='transparent' network='email'></SocialIcon>
             <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Contact Me</p>
         </motion.div>
-        </Link>
     </header>
   )
 }

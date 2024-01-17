@@ -1,10 +1,15 @@
 'use client';
 import React from 'react'
 import { motion } from 'framer-motion'
-import jobImage from '../../public/images/itrio_sa_logo.jpeg'
-type Props = {}
+import { Experiences } from '@/app/api/types/typings';
+import { urlFor } from '../../sanity/lib/image';
 
-function ExperienceCards({}: Props) {
+
+type Props = {
+    experience: Experiences;
+}
+
+export default function ExperienceCard({experience}: Props) {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
         w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100
@@ -25,24 +30,32 @@ function ExperienceCards({}: Props) {
         }}
         className='w-32 h-32 rounded-full md:rounded-full xl:w[200px] xl:h[200px]
          object-cover object-center'
-        src={jobImage.src}/>
+        src={urlFor(experience.companyImage).url()}/>
         <div className='px-0 md:px-10 '>
-            <h4 className='text-4xl font-light'>Full Stack Developer</h4>
+            <h4 className='text-4xl font-light'>{experience.jobTitle}</h4>
             <p className='font-bold text-2xl mt-1'></p>
             <div className='flex space-x-2 my-2'>
-                <img className='h-10 w-10 rounded-full'/>
+                {experience?.technologies?.map((technology:any) => (
+                    <img
+                    key={technology._id}
+                    className='h-10 w-10 rounded-full'
+                    src={urlFor(technology.image).url()} />
+                ))}
             </div>
-            <p className='uppercase py-5 text-grey-300 '>Started... Ended...</p>
+            <p className='uppercase py-5 text-grey-300 '>
+                {new Date(experience.dateStarted).toDateString()} - {" "} 
+                {experience.isCurrentlyWorkingThere 
+                ? 'Present'
+                : new Date(experience.dateEnded).toDateString()}
+            </p>
 
-            <ul className='list-disc space-y-4 ml-5 text-lg '>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+            <ul className='list-disc space-y-4 ml-5 text-lg h-54 overflow-y-scroll
+                scrollbar-thin  scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80'>
+                {experience?.points?.map((point:any,i:any) => (
+                    <li key={i}>{point}</li>
+                ))}
             </ul>
         </div>
     </article>
   )
 }
-
-export default ExperienceCards

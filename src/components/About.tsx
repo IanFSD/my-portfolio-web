@@ -1,12 +1,15 @@
 'use client';
 import { motion } from 'framer-motion'
 import React from 'react'
-import aboutImage from '../../public/images/about.webp'
+import { PageInfo } from '@/app/api/types/typings';
+import { urlFor } from '../../sanity/lib/image';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
 
-export default function ({}: Props) {
+export default function ({pageInfo}: Props) {
   return (
     <motion.div
     initial={{
@@ -35,7 +38,7 @@ export default function ({}: Props) {
             x:0,
             opacity: 1,
         }}
-        src={aboutImage.src}
+        src={urlFor(pageInfo.heroImage).url()}
         className='-mb-20 mb:mb-0 flex-shrink-0 rounded-full object-cover 
         mb:rounded-lg md:w-64 md:h-64 xl:w-[400px] xl:h-[500px]'/>
 
@@ -44,9 +47,7 @@ export default function ({}: Props) {
             Greetings!
             </h4>
             <p className='text-base'>
-            I'm Ian Sanchez, a young and versatile web developer dedicated to crafting exceptional digital experiences.
-            With a keen eye for design and a knack for coding, I bring creativity and technical expertise to every project.
-            I love to explore new technologies and take on challenges that expand my skills. Currently, I am looking for job opportunities as a programmer.
+                {pageInfo.backgroundInfo}
             </p>
         </div>
     </motion.div>
