@@ -25,7 +25,7 @@ function Hero({pageInfo}: Props) {
         <BackgroundCircles/>
         <img
             className='relative rounded-full h-32 w-32 mx-auto rounded object-cover'
-            src={urlFor(pageInfo?.profilePic).url()}
+            src='../../public/images/profilImage.webp'
             alt='../../public/images/profilImage.webp'
             />
         <div className='z-20'>
