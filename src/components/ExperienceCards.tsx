@@ -35,7 +35,7 @@ export default function ExperienceCard({experience}: Props) {
             <h4 className='text-4xl font-light'>{experience.jobTitle}</h4>
             <p className='font-bold text-2xl mt-1'></p>
             <div className='flex space-x-2 my-2'>
-                {experience.technologies.map((technology:any) => (
+                {experience?.technologies?.map((technology:any) => (
                     <img
                     key={technology._id}
                     className='h-10 w-10 rounded-full'
@@ -51,7 +51,7 @@ export default function ExperienceCard({experience}: Props) {
 
             <ul className='list-disc space-y-4 ml-5 text-lg h-54 overflow-y-scroll
                 scrollbar-thin  scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80'>
-                {experience.points.map((point:any,i:any) => (
+                {experience?.points?.map((point:any,i:any) => (
                     <li key={i}>{point}</li>
                 ))}
             </ul>

@@ -28,7 +28,7 @@ type Props = {
             duration:1.5,
         }}
         className='flex flew-row item-center'>
-            {socials.map((social) => (
+            {socials?.map((social) => (
             <SocialIcon key={social._id} url={social.url} fgColor='gray' bgColor='transparent'/>
             ))}
         </motion.div>
