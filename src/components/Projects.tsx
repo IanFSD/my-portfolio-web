@@ -21,10 +21,11 @@ function Projects({projects}: Props) {
     whileInView={{
         opacity: 1,
     }}
-    className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row
-        max-w-full justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Projects</h3>
-
+    className='h-screen flex relative flex-col text-center md:text-left md:flex-row
+    max-w-7xl px-10 justify-evenly mx-auto items-center'>
+        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            Projects
+        </h3>
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
             z-20 scrollbar scrollbar-track-gray-400/20
             scrollbar-thumb-[#F7AB0A] scrollbar-thin'>
@@ -55,7 +56,7 @@ function Projects({projects}: Props) {
                             </h4>
                             <div className='flex items-center space-x-2 justify-center  rounded-full'>
                             {project?.technologies?.map(technology => (
-                                <img className='max-h-10 max-w-10' src={urlFor(technology.image).url()} key={technology._id}/>
+                                <img key={technology._id} className='max-h-10 max-w-10' src={urlFor(technology.image).url()} />
                             ))}
                             </div>
                             <p className='text-lg text-center md:text-left'>
