@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCards';
 import { Experiences } from '@/app/api/types/typings';
-import { fetchExperience } from '@/app/api/fetchExperiences';
 
 type Props = {
     experiences: Experiences[];

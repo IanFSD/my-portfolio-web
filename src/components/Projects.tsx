@@ -11,7 +11,6 @@ type Props = {
 function Projects({projects}: Props) {
   return (
     <motion.div
-
     initial={{
         opacity:0
     }}
@@ -29,8 +28,8 @@ function Projects({projects}: Props) {
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
             z-20 scrollbar scrollbar-track-gray-400/20
             scrollbar-thumb-[#F7AB0A] scrollbar-thin'>
-           {projects.map((project) => (
-                <div key={project._id} className='w-screen flex-shrink-0 snap-center flex-col space-y-5
+           {projects.map((project,i) => (
+                <div key={`${project._id}-${i}`} className='w-screen flex-shrink-0 snap-center flex-col space-y-5
                    items-center justify-center  p-20 md:p-44 h-screen'>
                     <motion.img 
                     initial={{
@@ -55,8 +54,8 @@ function Projects({projects}: Props) {
                                 </span>
                             </h4>
                             <div className='flex items-center space-x-2 justify-center  rounded-full'>
-                            {project?.technologies?.map(technology => (
-                                <img key={technology._id} className='max-h-10 max-w-10' src={urlFor(technology.image).url()} />
+                            {project?.technologies?.map((technology,i) => (
+                                <img key={`${project._id}-${technology._id}-${i}`} className='max-h-10 max-w-10' src={urlFor(technology.image).url()} />
                             ))}
                             </div>
                             <p className='text-lg text-center md:text-left'>
