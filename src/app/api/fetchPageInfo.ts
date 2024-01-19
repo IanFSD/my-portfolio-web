@@ -11,7 +11,7 @@ export const fetchPageInfo = async ()=> {
     const pageInfo: PageInfo = data.result[0]
     return pageInfo;
     } catch (err) {
-        console.error('Page info error: ' + JSON.stringify(err));
+        console.error('Page info not found in: ' + URL);
         throw new Error(`PageInfo not found ${err}`)
     }
 }
