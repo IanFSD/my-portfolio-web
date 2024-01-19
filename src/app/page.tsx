@@ -66,7 +66,7 @@ export default async function Home({}) {
 
 async function getData() {
   const socials = await fetchSocials();
-  const experiences:Experiences[] = await fetchExperience();
+  const experiences = await fetchExperience();
   const pageInfo = await fetchPageInfo();
   const projects = await fetchProjects();
   const skills = await fetchSkills();
@@ -77,4 +77,4 @@ async function getData() {
       projects,
       skills
     }
-}
+  }
