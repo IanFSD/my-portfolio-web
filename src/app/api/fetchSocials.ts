@@ -13,5 +13,7 @@ export const fetchSocials = async ()=> {
   return socials;
   } catch (err) {
     console.error('Socials error: ' + JSON.stringify(err));
+    throw new Error()
+
   }
 }

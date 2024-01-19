@@ -19,5 +19,6 @@ export const fetchProjects = async ()=> {
     return projects;
   } catch (err) {
     console.error('Projects error: ' + JSON.stringify(err));
+    throw new Error()
   }
 }
