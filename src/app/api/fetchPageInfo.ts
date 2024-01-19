@@ -1,7 +1,8 @@
 import { PageInfo } from "@/app/api/types/typings";
+import { groq } from "next-sanity";
 
 
-let query = encodeURIComponent(`*[_type == "pageInfo"]`);
+let query = groq`*[_type == "pageInfo"]`;
 let URL = `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v1/data/query/${process.env.NEXT_PUBLIC_SANITY_DATASET}?query=${query}`;
 
 export const fetchPageInfo = async ()=> {
