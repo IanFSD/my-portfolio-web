@@ -18,7 +18,7 @@ export const fetchExperience = async ()=> {
     return experiences;
   } catch (err) {
     console.error('Experiences error: ' + JSON.stringify(err));
-    throw new Error()
+    throw new Error(`Experiences not found ${err}`)
 
   }
 }

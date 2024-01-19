@@ -12,6 +12,6 @@ export const fetchSkills = async ()=> {
     return skills;
     } catch (err) {
         console.error('Skills error: ' + JSON.stringify(err));
-        throw new Error()
+        throw new Error(`Skills not found ${err}`)
       }
 }
