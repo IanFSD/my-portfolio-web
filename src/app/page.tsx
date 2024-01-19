@@ -65,8 +65,9 @@ export default async function Home({}) {
 }
 
 async function getData() {
+  try {
   const socials = await fetchSocials();
-  const experiences:Experiences[] = await fetchExperience();
+  const experiences = await fetchExperience();
   const pageInfo = await fetchPageInfo();
   const projects = await fetchProjects();
   const skills = await fetchSkills();
@@ -77,4 +78,8 @@ async function getData() {
       projects,
       skills
     }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw new Error()
+  }
 }

@@ -12,8 +12,12 @@ let query = encodeURIComponent(`*[_type == "project"]{
   
 
 export const fetchProjects = async ()=> {
+  try{
     const res = await fetch(URL,{ next: { revalidate: 10 } });
     const data = await res.json();
     const projects: Project[] = data.result
     return projects;
+  } catch (err) {
+    console.error('Projects error: ' + JSON.stringify(err));
+  }
 }
