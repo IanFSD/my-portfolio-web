@@ -19,5 +19,10 @@ export default defineType({
         hotspot:true
       }
     }),
+    defineField({
+      name: 'link',
+      title: 'Link',
+      type: 'url',
+    }),
   ]
 })
