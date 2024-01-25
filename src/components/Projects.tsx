@@ -26,11 +26,11 @@ function Projects({projects}: Props) {
             Projects
         </h3>
         <div className='absolute w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
-            z-20 scrollbar scrollbar-track-gray-400/20 items-center
+            z-20 scrollbar scrollbar-track-gray-400/20 items-center snap-center
             scrollbar-thumb-[#F7AB0A]'>
            {projects.map((project,i) => (
                 <div key={`${project._id}-${i}`} className='w-screen flex-shrink-0 snap-center flex-col space-y-5
-                   items-center justify-center p-20 md:p-44 h-screen'>
+                   items-center justify-center flex p-20 md:p-44 h-screen'>
                     <motion.img 
                     initial={{
                         y: -300,
@@ -58,15 +58,17 @@ function Projects({projects}: Props) {
                                 <img key={`${project._id}-${technology._id}-${i}`} className='max-h-10 max-w-10' src={urlFor(technology.image).url()} />
                             ))}
                             </div>
-                            <p className='text-lg text-center justify-center '>
+                            <p className='text-lg text-center justify-center flex flex'>
                                 {project.summary}
                             </p>
                     </div>
-                    <a href={project.linkToBuild}>
-                            <button className='resumeButton'>
+                    <div className='text-lg justify-center flex'>
+                    <a target='_blank' href={project.linkToBuild}>
+                            <button className='githubButton'>
                                 Link to GitHub here
                             </button>
                             </a>
+                    </div>
                 </div>
             ))}
         </div>
