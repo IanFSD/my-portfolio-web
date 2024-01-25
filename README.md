@@ -1,8 +1,8 @@
 <h1 align="center">My Portfolio</h1>
 
-My Portfolio project to show my coding skills.
+My online portfolio, and the page you are on right now - a space where I showcase my passion for creating meaningful and innovative digital experiences. This web application serves as a curated collection of my projects and skills, giving visitors an insight into my journey as a developer. Built with Next.js framework and Sanity.io as CMD
 
-# Libraries #
+# Libraries Used #
 * [Next.Js](https://nextjs.org/)
 * [React](https://react.dev/)
 * [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
