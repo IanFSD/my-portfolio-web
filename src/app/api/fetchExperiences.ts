@@ -1,6 +1,6 @@
 import { Experiences } from "@/app/api/types/typings";
 
-let query = encodeURIComponent(`*[_type == 'experience'] {
+let query = encodeURIComponent(`*[_type == 'experience'] | order(dateStarted desc) {
   ...,
    technologies[]->{
      title,
